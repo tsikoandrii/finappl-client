@@ -1,12 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Header from '@organisms/Header'
+import Footer from '@organisms/Footer'
 
 const PageTemplate = ({ children }) => {
   return (
     <div>
       <Header />
-      {children}
+      <div className="page">
+        <div className="container">{children}</div>
+      </div>
+      <Footer />
     </div>
   )
 }

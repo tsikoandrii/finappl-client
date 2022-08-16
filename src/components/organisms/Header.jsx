@@ -1,14 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Nav from '@molecules/Nav'
+
 const StyledHeader = styled.div`
   width: 100%;
-  padding: 20px;
-  background: #c4c4c4;
+  background: ${(props) => props.theme.palette.accent};
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
 `
 
 const Header = () => {
-  return <StyledHeader>Header</StyledHeader>
+  return (
+    <StyledHeader>
+      <div className="container">
+        <Nav />
+      </div>
+    </StyledHeader>
+  )
 }
 
 export default Header
